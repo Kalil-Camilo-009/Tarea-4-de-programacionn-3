@@ -35,7 +35,7 @@ namespace Proyecto_de_pruebas_de_Selenium.Tests
         [Test]
         public void LoginCorrecto()
         {
-            Reporteador.test = Reporteador.extent.CreateTest("✅ Login Correcto");
+            Reporteador.test = Reporteador.extent.CreateTest("Login Correcto");
 
             try
             {
@@ -100,7 +100,7 @@ namespace Proyecto_de_pruebas_de_Selenium.Tests
                 Assert.That(camposRequeridos.Count >= 1, "❌ No se mostraron los mensajes de campos requeridos");
 
                 GuardarCaptura("LoginCamposVacios");
-                Reporteador.test.Pass("✅ Validación de campos vacíos exitosa");
+                Reporteador.test.Pass("Validación de campos vacíos exitosa");
             }
             catch (Exception ex)
             {
@@ -141,11 +141,11 @@ namespace Proyecto_de_pruebas_de_Selenium.Tests
                 File.WriteAllBytes(rutaArchivo, imagenBytes);
 
                 Reporteador.test.AddScreenCaptureFromPath(rutaArchivo);
-                TestContext.WriteLine($"📸 Captura guardada en: {rutaArchivo}");
+                TestContext.WriteLine($"Captura guardada en: {rutaArchivo}");
             }
             catch (Exception ex)
             {
-                TestContext.WriteLine($"⚠️ Error al tomar la captura: {ex.Message}");
+                TestContext.WriteLine($"Error al tomar la captura: {ex.Message}");
             }
         }
     }

@@ -46,16 +46,16 @@ namespace Proyecto_de_pruebas_de_Selenium.Tests
                 wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//span[text()='PIM']"))).Click();
                 wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//a[text()='Employee List']"))).Click();
 
-                // Espera a que cargue la tabla
+                
                 wait.Until(ExpectedConditions.ElementExists(By.XPath("//div[@class='oxd-table-body']/div[1]")));
 
-                // Clic en el ícono de eliminar
+                
                 wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//div[@class='oxd-table-body']/div[1]//i[contains(@class,'bi-trash')]"))).Click();
 
-                // Esperar a que aparezca el botón "Yes, Delete" en el modal
+                
                 wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//button[normalize-space()='Yes, Delete']"))).Click();
 
-                // Esperar a que desaparezca el modal
+                
                 wait.Until(ExpectedConditions.InvisibilityOfElementLocated(By.XPath("//div[@role='dialog']")));
 
                 GuardarCaptura("EliminarEmpleado");
@@ -90,3 +90,9 @@ namespace Proyecto_de_pruebas_de_Selenium.Tests
         }
     }
 }
+
+
+
+
+
+
